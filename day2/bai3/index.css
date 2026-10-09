@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap");
+:root { color-scheme: light; --ink: #20342d; --muted: #73837b; --line: #dbe4dd; --green: #1c5949; --lime: #d4ed8b; font-family: "DM Sans", sans-serif; }
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; background: #f3f6f3; color: var(--ink); background-image: radial-gradient(#cfdbd1 .7px, transparent .7px); background-size: 18px 18px; }
+.sheet { width: min(850px, calc(100% - 36px)); margin: 0 auto; }
+.masthead, footer { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .11em; }
+.masthead { height: 68px; }.masthead a { color: var(--ink); text-decoration: none; }.masthead a span { padding: 0 5px; color: var(--green); }
+.intro { padding: 49px 0 27px; }.kicker { margin: 0 0 11px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+h1 { margin: 0 0 10px; font: 600 clamp(38px, 7vw, 57px)/1.04 "Fraunces", serif; }h1 em { color: var(--green); }
+.intro>p:last-child { max-width: 470px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+#grade-form { padding: 27px 30px 25px; border: 1px solid var(--line); background: white; }
+.form-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 25px; }h2 { margin: 0; font: 600 23px "Fraunces", serif; }
+.year-select { display: grid; gap: 7px; color: var(--muted); font-size: 11px; }.year-select select { padding: 9px 12px; border: 1px solid var(--line); border-radius: 3px; background: white; color: var(--ink); }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }.score-field { display: grid; gap: 7px; padding: 15px; border: 1px solid var(--line); background: #fafcf9; font-size: 13px; font-weight: 700; }
+.score-field input { width: 100%; padding: 4px 0; border: 0; outline: 0; background: transparent; color: var(--green); font: 600 32px "Fraunces", serif; }.score-field input:focus-visible { outline: 2px solid #9cbf79; }.score-field span { color: var(--muted); font-size: 10px; font-weight: 400; }
+.weight, .error { min-height: 17px; margin: 13px 0 0; color: var(--muted); font-size: 11px; }.error { color: #b24635; }
+.actions { display: flex; gap: 10px; margin-top: 15px; }.actions button { min-height: 42px; padding: 0 16px; border: 1px solid transparent; border-radius: 3px; font: 700 12px "DM Sans", sans-serif; cursor: pointer; }.primary { display: flex; align-items: center; gap: 20px; background: var(--green); color: white; }.primary span { color: var(--lime); font-size: 16px; }.secondary { background: transparent; color: var(--muted); }.secondary:hover { color: var(--ink); text-decoration: underline; }
+.result { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 10px; margin-top: 12px; padding: 24px 30px; background: var(--green); color: white; }.result .kicker { color: #b8d2c6; }.average { margin: 0; color: var(--lime); font: 600 58px/1 "Fraunces", serif; }.average small { padding-left: 5px; color: #b8d2c6; font: 12px "DM Sans", sans-serif; }.grade { padding-bottom: 7px; font-size: 16px; font-weight: 700; }.result-note { grid-column: 1 / -1; margin: 0; color: #c4d7cd; font-size: 11px; }
+footer { margin-top: 22px; padding: 15px 0 22px; border: 0; color: #84958b; font-size: 9px; }
+@media(max-width: 520px) { .intro { padding-top: 37px; }#grade-form { padding: 22px 18px; }.form-top { align-items: flex-start; }.fields { grid-template-columns: 1fr; gap: 10px; }.score-field { grid-template-columns: 1fr auto; align-items: center; }.score-field input { grid-column: 2; grid-row: 1 / span 2; width: 120px; }.score-field span { grid-column: 1; }.result { padding: 22px 18px; }footer { gap: 10px; font-size: 8px; } }

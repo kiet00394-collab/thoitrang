@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phiếu bán hàng</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../fixed-type.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header><a href="index.html">SỔ BÁN HÀNG</a><span>03 / ĐƠN MỚI</span></header>
+    <section class="intro"><p>QUẢN LÝ ĐƠN HÀNG</p><h1>Phiếu bán <em>hàng</em></h1><span>Nhập thông tin sản phẩm để tính chiết khấu và tổng tiền.</span></section>
+    <form id="order-form" novalidate>
+      <div class="form-title"><div><small>THÔNG TIN GIAO DỊCH</small><h2>Thêm sản phẩm</h2></div><span class="discount">CHIẾT KHẤU 15%</span></div>
+      <div class="grid">
+        <label class="wide">Tên khách hàng<input id="customer" autocomplete="name" placeholder="Ví dụ: Nguyễn Minh Anh" required></label>
+        <label>Mã sản phẩm<input id="product-code" placeholder="SP-001" required></label>
+        <label>Tên sản phẩm<input id="product-name" placeholder="Áo sơ mi linen" required></label>
+        <label>Số lượng<input id="quantity" type="number" min="1" step="1" inputmode="numeric" placeholder="1" required></label>
+        <label>Đơn giá (₫)<input id="price" type="number" min="0" step="1000" inputmode="numeric" placeholder="250000" required></label>
+      </div>
+      <p class="error" id="error" role="alert" aria-live="polite"></p>
+      <div class="actions"><button class="save" type="submit">Lưu sản phẩm <span>+</span></button><button class="reset" type="reset">Xóa thông tin</button><button class="show" id="show-orders" type="button">Cập nhật bảng</button></div>
+    </form>
+    <section class="orders"><div class="table-heading"><div><small>GIAO DỊCH ĐÃ LƯU</small><h2>Danh sách đơn hàng</h2></div><span id="order-count">0 đơn</span></div>
+      <div class="table-scroll"><table><thead><tr><th>#</th><th>Khách hàng</th><th>Mã SP</th><th>Sản phẩm</th><th>SL</th><th>Đơn giá</th><th>Thành tiền</th><th>CK 15%</th><th>Tổng cộng</th></tr></thead><tbody id="orders-body"><tr class="empty"><td colspan="9">Chưa có sản phẩm. Điền thông tin phía trên để bắt đầu.</td></tr></tbody></table></div>
+    </section>
+    <footer><span>PHIẾU BÁN HÀNG</span><span>CHIẾT KHẤU ĐƯỢC TÍNH TRÊN THÀNH TIỀN</span></footer>
+  </main>
+</body>
+</html>

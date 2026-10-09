@@ -1,0 +1,7 @@
+.intro h1 { font-size: 50px; }
+.intro-copy h1 { font-size: 58px; }
+
+@media (max-width: 580px) {
+  .intro h1 { font-size: 37px; }
+  .intro-copy h1 { font-size: 42px; }
+}
